@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MPC Sample Project Converter</title>
+  <meta name="description" content="Convert Akai MPC Sample projects into MPC X format your own way — with your own template, drum-group splitting, sequence renaming and more." />
+  <link rel="icon" href="assets/images/icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><img src="assets/images/logo.svg" alt="MPC Sample Project Converter" /></a>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#download">Download</a>
+      <a class="pill donate" href="https://www.paypal.me/padbangers" target="_blank" rel="noopener">PayPal Donation</a>
+    </nav>
+  </header>
+
+  <section id="top" class="hero">
+    <div class="hero-text">
+      <h1>Convert MPC&nbsp;Sample projects into MPC&nbsp;X format — <span class="accent">your way</span>.</h1>
+      <p class="lead">
+        The MPC X can already import MPC Sample projects, but it does it its own way.
+        This app rebuilds them inside <b>your own template</b>, so every converted beat
+        keeps your mixer, submixes, sends and master FX exactly the way you set them up.
+      </p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#download">Download</a>
+        <a class="btn ghost" href="#features">See features</a>
+      </div>
+      <p class="sub">Standalone desktop app · macOS &amp; Windows · no Python, no installation hassle.</p>
+    </div>
+    <div class="hero-shot">
+      <img src="assets/images/full-app.png" alt="MPC Sample Project Converter app window" />
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2>Features</h2>
+
+    <div class="feature">
+      <div class="feature-text">
+        <h3>Your template, kept 1:1</h3>
+        <p>
+          Pick your MPC X template once. The converter keeps its mixer, submixes,
+          sends, master FX and full track layout untouched — only the samples and
+          sequences come over from the source project.
+        </p>
+      </div>
+      <div class="feature-img"><img src="assets/images/full-app.png" alt="Full app window" /></div>
+    </div>
+
+    <div class="feature reverse">
+      <div class="feature-text">
+        <h3>16-pad grid with preview</h3>
+        <p>
+          See every loaded pad across all 8 banks (A–H). Click a pad's
+          play button to preview the sample, stop it any time — handy for the long
+          loops. FX-routed pads are marked so you always know what's wet.
+        </p>
+      </div>
+      <div class="feature-img"><img src="assets/images/drum-pads.png" alt="Drum pad grid" /></div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-text">
+        <h3>Split pads into drum groups</h3>
+        <p>
+          Assign pads to one or more drum groups before converting. Name groups from
+          a preset list (Drums, Bass, Chops, Guitar, Loops, Strings…) or add your own.
+          Each group becomes its own MPC X program.
+        </p>
+      </div>
+      <div class="feature-img"><img src="assets/images/drum-groups.png" alt="Drum groups panel" /></div>
+    </div>
+
+    <div class="feature reverse">
+      <div class="feature-text">
+        <h3>Rename sequences &amp; keep Song Mode</h3>
+        <p>
+          Every sequence (and the Song Mode playlist) is carried over. Rename each one
+          from musical presets — Intro, Verse, Chorus, Bridge, Buildup, Break, Drop,
+          Outro — or your own labels.
+        </p>
+      </div>
+      <div class="feature-img"><img src="assets/images/sequences.png" alt="Sequences panel" /></div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-text">
+        <h3>Manage your own name presets</h3>
+        <p>
+          Add, delete and reset the group- and sequence-name presets. Your custom
+          names are remembered between sessions, so your workflow stays yours.
+        </p>
+      </div>
+      <div class="feature-img"><img src="assets/images/manage-names.png" alt="Manage group names dialog" /></div>
+    </div>
+
+    <ul class="feature-grid">
+      <li><b>Pad FX</b> — carry the source's pad insert effect onto the drum group.</li>
+      <li><b>Color Compressor</b> — keep the source's master compressor when present.</li>
+      <li><b>Disk / RAM streaming</b> — load samples to RAM to avoid the "disk streaming too slow" warning.</li>
+      <li><b>Per-pad routing</b> — wet/dry routing is preserved exactly.</li>
+      <li><b>Automation &amp; notes</b> — full sequence data transfers, not just notes.</li>
+      <li><b>4 languages</b> — English, German, Spanish, French.</li>
+    </ul>
+  </section>
+
+  <section id="how" class="how">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><span>1</span><div><b>Set your output folder &amp; template.</b> Both are remembered for next time.</div></li>
+      <li><span>2</span><div><b>Drag &amp; drop an MPC Sample project</b> (.xpj) onto the window.</div></li>
+      <li><span>3</span><div><b>Assign pads to groups and rename sequences</b> — or just hit Start.</div></li>
+      <li><span>4</span><div><b>Click START.</b> A ready-to-open MPC X project is written to your output folder. Originals are never touched.</div></li>
+    </ol>
+  </section>
+
+  <section id="download" class="download">
+    <h2>Download</h2>
+    <p class="download-sub">Free. Runs standalone — no Python or extra runtime required.</p>
+    <div class="download-cards">
+      <a class="dl-card disabled" href="#" aria-disabled="true">
+        <span class="dl-os">macOS</span>
+        <span class="dl-meta">Apple Silicon · .app</span>
+        <span class="dl-cta">Coming soon</span>
+      </a>
+      <a class="dl-card disabled" href="#" aria-disabled="true">
+        <span class="dl-os">Windows</span>
+        <span class="dl-meta">64-bit · portable .exe</span>
+        <span class="dl-cta">Coming soon</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>MPC Sample Project Converter · MIT License</p>
+    <p>
+      Made by Padbangers ·
+      <a href="mailto:fullpacesimracing@gmail.com">fullpacesimracing@gmail.com</a> ·
+      <a href="https://www.paypal.me/padbangers" target="_blank" rel="noopener">Support development</a>
+    </p>
+    <p class="disclaimer">Akai, MPC, MPC Sample and MPC X are trademarks of their respective owners. This project is independent and not affiliated with or endorsed by Akai.</p>
+  </footer>
+</body>
+</html>
