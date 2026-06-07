@@ -43,6 +43,12 @@ h1, h2, h3 { line-height: 1.2; }
 }
 .brand img { height: 75px; }
 .brand:hover { text-decoration: none; }
+/* slim Padbangers strip above the header, slightly darker than the header */
+.topstrip {
+  display: flex; align-items: center; justify-content: center;
+  background: #0c0c0c; padding: 5px 0; border-bottom: 1px solid #000;
+}
+.topstrip img { height: 26px; width: auto; display: block; }
 .nav { display: flex; align-items: center; gap: 22px; }
 .nav a { color: #d8dde3; font-size: 14px; font-weight: 600; }
 .nav a:hover { color: #fff; text-decoration: none; }
