@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MPC Sample Project Converter</title>
-  <meta name="description" content="Convert Akai MPC Sample projects for your standalone MPC (One, Live, X/XL) your own way — with your own template, drum-group splitting, sequence renaming and more." />
+  <meta name="description" content="Convert Akai MPC Sample projects for your standalone MPC (One, Live, X/XL) — chops become playable programs, tuning melodies become keygroups, with an in-app preview, optional template and more." />
   <link rel="icon" href="assets/images/icon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -24,12 +24,13 @@
 
   <section id="top" class="hero">
     <div class="hero-text">
-      <h1>Convert MPC&nbsp;Sample projects to standalone MPC <span class="accent">your way</span>.</h1>
+      <h1>MPC&nbsp;Sample projects on your standalone MPC — <span class="accent">chops &amp; tuning included</span>.</h1>
       <p class="lead">
-        Works with the big standalone MPCs — <b>MPC One, MPC Live and MPC X/XL</b>.
-        They can already import MPC Sample projects, but this app rebuilds them inside
-        <b>your own template</b>, so every converted beat keeps your mixer routing,
-        submixes, sends and FX exactly the way you set them up.
+        For the big standalone MPCs — <b>MPC One, MPC Live and MPC X/XL</b>. Importing
+        an MPC Sample project loses your chops and your "16 Levels" tuning melodies.
+        This app rebuilds them as real, playable programs: <b>chops become a chop
+        program</b>, <b>tuning melodies become keygroups</b> — plus an in-app preview,
+        program/sequence editing and an optional template for your own mixer setup.
       </p>
       <div class="hero-cta">
         <a class="btn primary" href="#download">Download</a>
@@ -47,89 +48,18 @@
 
     <div class="feature">
       <div class="feature-text">
-        <h3>Your template, kept 1:1</h3>
+        <h3>Chops to Program</h3>
         <p>
-          Pick your MPC template once. The converter keeps its mixer, submixes,
-          sends, master FX and full track layout untouched — only the samples and
-          sequences come over from the source project.
+          MPC Sample chops live inside the sample, and the standalone MPC can't take
+          them over directly. The converter detects a chopped sample automatically and
+          turns it into its own drum program — one chop per pad, starting at A1. Your
+          performance is rebuilt as real MIDI notes: each hit lands at its original
+          time on the pad of the chop it actually triggered, with the original length
+          and velocity, and the chops choke each other just like the mono source pad.
+          Pitch, filter, envelopes and warp settings come along.
         </p>
       </div>
-      <div class="feature-img"><img src="assets/images/full-app.png" alt="Full app window" /></div>
-    </div>
-
-    <div class="feature reverse">
-      <div class="feature-text">
-        <h3>16-pad grid with preview</h3>
-        <p>
-          See every loaded pad across all 8 banks (A–H). Click a pad's
-          play button to preview the sample, stop it any time — handy for the long
-          loops. FX-routed pads are marked so you always know what's wet.
-        </p>
-      </div>
-      <div class="feature-img"><img src="assets/images/drum-pads.png" alt="Drum pad grid" /></div>
-    </div>
-
-    <div class="feature">
-      <div class="feature-text">
-        <h3>Split pads into programs</h3>
-        <p>
-          Assign pads to one or more programs before converting. Name groups from
-          a preset list (Drums, Bass, Chops, Guitar, Loops, Strings…) or add your own.
-          Each group becomes its own MPC program.
-        </p>
-      </div>
-      <div class="feature-img"><img src="assets/images/drum-groups.png" alt="Drum groups panel" /></div>
-    </div>
-
-    <div class="feature reverse">
-      <div class="feature-text">
-        <h3>Rename sequences &amp; keep Song Mode</h3>
-        <p>
-          Every sequence (and the Song Mode playlist) is carried over. Rename each one
-          from musical presets — Intro, Verse, Chorus, Bridge, Buildup, Break, Drop,
-          Outro — or your own labels.
-        </p>
-      </div>
-      <div class="feature-img"><img src="assets/images/sequences.png" alt="Sequences panel" /></div>
-    </div>
-
-    <div class="feature">
-      <div class="feature-text">
-        <h3>Manage your own name presets</h3>
-        <p>
-          Add, delete and reset the group- and sequence-name presets. Your custom
-          names are remembered between sessions, so your workflow stays yours.
-        </p>
-      </div>
-      <div class="feature-img"><img src="assets/images/manage-names.png" alt="Manage group names dialog" /></div>
-    </div>
-
-    <div class="feature reverse">
-      <div class="feature-text">
-        <h3>Banks as Programs</h3>
-        <p>
-          One click turns each used pad bank into its own drum group. If your
-          workflow is already organised by banks, this saves you from assigning
-          pads to groups by hand. Toggle Pad&nbsp;FX, Color&nbsp;Compressor and
-          Disk/RAM streaming right from the same row.
-        </p>
-      </div>
-      <div class="feature-img"><img src="assets/images/banks-as-programs.png" alt="Banks as Programs toggle and bank switch" /></div>
-    </div>
-
-    <div class="feature">
-      <div class="feature-text">
-        <h3>Chops to MIDI</h3>
-        <p>
-          MPC Sample chops live inside the sample. The standalone MPC plays them
-          differently, so the converter detects a chopped sample and turns it into
-          its own drum program — one chop per pad. Your performance is rebuilt as
-          real MIDI notes: each hit lands on the chop it actually triggered, at its
-          original position, and the chops choke each other just like the mono
-          source pad. Pitch, filter, envelopes and warp settings come along.
-        </p>
-      </div>
-      <div class="feature-img"><img src="assets/images/chops-to-midi.png" alt="Chops to MIDI" /></div>
+      <div class="feature-img"><img src="assets/images/chops-to-midi.png" alt="Chops to Program" /></div>
     </div>
 
     <div class="feature reverse">
@@ -137,23 +67,75 @@
         <h3>Tuning to Keygroup</h3>
         <p>
           A sample played as a melody via "16 Levels" Tuning becomes a real keygroup
-          program, and the melody is converted to real, in-tune MIDI notes — the
-          pitch is derived from the sample's root note. Filter, envelopes, note
-          on/off behaviour and warp settings are carried over, so it sounds like the
-          original.
+          program. The melody is converted to real, in-tune MIDI notes — the pitch per
+          note is read from the tuning data and placed relative to the sample's root
+          note, so it plays chromatically in tune. Filter, envelopes, note on/off
+          behaviour and warp settings are carried over too.
         </p>
       </div>
       <div class="feature-img"><img src="assets/images/tuning-to-keygroup.png" alt="Tuning to Keygroup" /></div>
     </div>
 
+    <div class="feature">
+      <div class="feature-text">
+        <h3>Preview pads &amp; whole sequences</h3>
+        <p>
+          Audition any pad, or press play next to a sequence to hear the whole thing
+          loop — with the right timing, pitch (tuning), chops and pad mono/choke, so
+          you can tell sequences apart before naming them. It's a quick orientation
+          aid; effects and filters aren't reproduced. Pick the audio output device in
+          Settings.
+        </p>
+      </div>
+      <div class="feature-img"><img src="assets/images/sequences.png" alt="Sequence preview" /></div>
+    </div>
+
+    <div class="feature reverse">
+      <div class="feature-text">
+        <h3>Programs &amp; sequences, your way</h3>
+        <p>
+          Split the remaining pads into programs and name them from a preset list
+          (Drums, Bass, Chops, Guitar, Loop, One&nbsp;Shots…) or your own. Rename the
+          carried-over sequences (Intro, Verse, Chorus…) and keep the Song Mode
+          playlist. Drag rows to reorder both — the order is kept in the export.
+        </p>
+      </div>
+      <div class="feature-img"><img src="assets/images/drum-groups.png" alt="Programs and sequences panel" /></div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-text">
+        <h3>Your own template (optional)</h3>
+        <p>
+          Want your converted beats inside your own setup? Tick Template and pick your
+          MPC template once — its mixer, submixes, sends, master FX and track layout
+          are kept 1:1. Skip it and a clean default project is used instead.
+        </p>
+      </div>
+      <div class="feature-img"><img src="assets/images/full-app.png" alt="Full app window" /></div>
+    </div>
+
+    <div class="feature reverse">
+      <div class="feature-text">
+        <h3>Banks as Programs &amp; Sort Pads</h3>
+        <p>
+          One click turns each used pad bank into its own program. Sort&nbsp;Pads lays
+          every program's samples out from A1 with no gaps (notes remapped to match),
+          so programs stay tidy. FX-routed pads are marked so you always know what's
+          wet.
+        </p>
+      </div>
+      <div class="feature-img"><img src="assets/images/banks-as-programs.png" alt="Banks as Programs toggle and bank switch" /></div>
+    </div>
+
     <ul class="feature-grid">
-      <li><b>Pad FX</b> — carry the source's pad insert effect onto the drum group.</li>
-      <li><b>Color Compressor</b> — keep the source's master compressor when present.</li>
-      <li><b>Disk / RAM streaming</b> — load samples to RAM to avoid the "disk streaming too slow" warning.</li>
+      <li><b>Keep Pad FX</b> — carry the source's pad insert effect onto the program.</li>
+      <li><b>Keep Color Compressor</b> — keep the source's master compressor when present.</li>
+      <li><b>RAM / Disk loading</b> — RAM by default, avoiding the "disk streaming too slow" warning.</li>
       <li><b>Per-pad routing</b> — wet/dry routing is preserved exactly.</li>
-      <li><b>Sort Pads</b> — lay each program's samples out from A1 with no gaps; notes are remapped to match.</li>
-      <li><b>Pad &amp; sequence preview</b> — audition pads and whole sequences (with pitch and chops) right in the app.</li>
+      <li><b>Name presets</b> — add, delete and reset program- and sequence-name presets; remembered between sessions.</li>
       <li><b>Automation &amp; notes</b> — full sequence data transfers, not just notes.</li>
+      <li><b>Settings</b> — language and audio output device for the preview.</li>
       <li><b>4 languages</b> — English, German, Spanish, French.</li>
     </ul>
   </section>
@@ -161,9 +143,9 @@
   <section id="how" class="how">
     <h2>How it works</h2>
     <ol class="steps">
-      <li><span>1</span><div><b>Set your output folder &amp; template.</b> Both are remembered for next time.</div></li>
-      <li><span>2</span><div><b>Drag &amp; drop an MPC Sample project</b> (.xpj) onto the window.</div></li>
-      <li><span>3</span><div><b>Assign pads to groups and rename sequences</b> — or just hit Start.</div></li>
+      <li><span>1</span><div><b>Drag &amp; drop an MPC Sample project</b> (.xpj) onto the window. Chops and tuning melodies are detected right away.</div></li>
+      <li><span>2</span><div><b>Set your output folder</b> — and, optionally, tick Template to use your own MPC template as the skeleton.</div></li>
+      <li><span>3</span><div><b>Name the detected chop/keygroup programs, split the rest into programs and rename sequences</b> — or just hit Start.</div></li>
       <li><span>4</span><div><b>Click START.</b> A ready-to-open MPC project is written to your output folder. Originals are never touched.</div></li>
     </ol>
   </section>
