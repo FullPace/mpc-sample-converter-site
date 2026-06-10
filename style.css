@@ -149,7 +149,12 @@ img.zoomable:hover { transform: translateY(-2px); }
 
 /* ---- download ---- */
 .download { max-width: 880px; margin: 0 auto; padding: 56px 28px; text-align: center; }
-.download-sub { color: var(--text-dim); margin: -24px 0 30px; }
+.download-sub { color: var(--text-dim); margin: -24px 0 10px; }
+.download-compat {
+  display: inline-block; margin: 0 0 26px; padding: 8px 16px; border-radius: 6px;
+  font-size: 14px; color: var(--text);
+  background: rgba(255,122,0,0.12); border: 1px solid rgba(255,122,0,0.45);
+}
 .download-cards { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; }
 .dl-card {
   display: flex; flex-direction: column; gap: 6px; align-items: center;
