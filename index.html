@@ -39,7 +39,7 @@
       <p class="sub">Standalone desktop app · macOS &amp; Windows · Portable, no installation hassle.</p>
     </div>
     <div class="hero-shot">
-      <img src="assets/images/full-app.png" alt="MPC Sample Project Converter app window" />
+      <img class="zoomable" src="assets/images/full-app.webp" alt="MPC Sample Project Converter app window" />
     </div>
   </section>
 
@@ -59,7 +59,7 @@
           Pitch, filter, envelopes and warp settings come along.
         </p>
       </div>
-      <div class="feature-img"><img src="assets/images/chops-to-midi.png" alt="Chops to Program" /></div>
+      <div class="feature-img"><img class="zoomable" src="assets/images/chops-to-midi.webp" alt="Chops to Program" /></div>
     </div>
 
     <div class="feature reverse">
@@ -73,7 +73,7 @@
           behaviour and warp settings are carried over too.
         </p>
       </div>
-      <div class="feature-img"><img src="assets/images/tuning-to-keygroup.png" alt="Tuning to Keygroup" /></div>
+      <div class="feature-img"><img class="zoomable" src="assets/images/tuning-to-keygroup.webp" alt="Tuning to Keygroup" /></div>
     </div>
 
     <div class="feature">
@@ -87,7 +87,7 @@
           Settings.
         </p>
       </div>
-      <div class="feature-img"><img src="assets/images/sequences.png" alt="Sequence preview" /></div>
+      <div class="feature-img"><img class="zoomable" src="assets/images/sequences.webp" alt="Sequence preview" /></div>
     </div>
 
     <div class="feature reverse">
@@ -101,22 +101,10 @@
           the export.
         </p>
       </div>
-      <div class="feature-img"><img src="assets/images/drum-groups.png" alt="Programs and sequences panel" /></div>
+      <div class="feature-img"><img class="zoomable" src="assets/images/full-app.webp" alt="Tracks and sequences panel" /></div>
     </div>
 
     <div class="feature">
-      <div class="feature-text">
-        <h3>Your own template (optional)</h3>
-        <p>
-          Want your converted beats inside your own setup? Tick Template and pick your
-          MPC template once — its mixer, submixes, sends, master FX and track layout
-          are kept 1:1. Skip it and a clean default project is used instead.
-        </p>
-      </div>
-      <div class="feature-img"><img src="assets/images/full-app.png" alt="Full app window" /></div>
-    </div>
-
-    <div class="feature reverse">
       <div class="feature-text">
         <h3>Banks as Programs &amp; Sort Pads</h3>
         <p>
@@ -126,7 +114,30 @@
           wet.
         </p>
       </div>
-      <div class="feature-img"><img src="assets/images/banks-as-programs.png" alt="Banks as Programs toggle and bank switch" /></div>
+      <div class="feature-img"><img class="zoomable" src="assets/images/options.webp" alt="Options: Banks as Programs and Sort Pads" /></div>
+    </div>
+
+    <div class="feature reverse">
+      <div class="feature-text">
+        <h3>Settings</h3>
+        <p>
+          Choose the interface language, the audio output device used for the pad and
+          sequence preview, and the sample loading mode — RAM by default (which avoids
+          the MPC "disk streaming too slow" warning), or Disk for very large projects.
+        </p>
+      </div>
+      <div class="feature-img"><img class="zoomable" src="assets/images/settings.webp" alt="Settings: language and audio output" /></div>
+    </div>
+
+    <div class="feature text-only">
+      <div class="feature-text">
+        <h3>Your own template (optional)</h3>
+        <p>
+          Want your converted beats inside your own setup? Tick Template and pick your
+          MPC template once — its mixer, submixes, sends, master FX and track layout
+          are kept 1:1. Skip it and a clean default project is used instead.
+        </p>
+      </div>
     </div>
 
     <ul class="feature-grid">
@@ -165,13 +176,13 @@
         <span class="dl-meta">Intel</span>
         <span class="dl-cta">Coming soon</span>
       </a>
-      <a class="dl-card" href="https://github.com/FullPace/mpc-sample-converter-site/releases/download/v0.1.0/MPC-Sample-Project-Converter-0.1.0-win-x64-portable.exe">
+      <a class="dl-card disabled" href="#" aria-disabled="true">
         <span class="dl-os">Windows</span>
         <span class="dl-meta">64-bit · portable .exe</span>
-        <span class="dl-cta">Download</span>
+        <span class="dl-cta">Coming soon</span>
       </a>
     </div>
-    <p class="download-note">macOS builds are being notarized and will be available shortly. On Windows, allow it through SmartScreen ("More info → Run anyway").</p>
+    <p class="download-note">The app may take a few seconds to open the first time. On Windows, allow it through SmartScreen ("More info → Run anyway").</p>
   </section>
 
   <footer class="site-footer">
@@ -195,5 +206,31 @@
 
     <p class="disclaimer">Akai, MPC, MPC Sample and MPC X are trademarks of their respective owners. This project is independent and not affiliated with or endorsed by Akai.</p>
   </footer>
+
+  <!-- image zoom lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+  <script>
+    (function () {
+      var box = document.getElementById('lightbox');
+      var img = document.getElementById('lightbox-img');
+      function open(src, alt) {
+        img.src = src; img.alt = alt || '';
+        box.classList.add('open'); box.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close() {
+        box.classList.remove('open'); box.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = ''; img.src = '';
+      }
+      document.querySelectorAll('img.zoomable').forEach(function (el) {
+        el.addEventListener('click', function () { open(el.src, el.alt); });
+      });
+      box.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+  </script>
 </body>
 </html>
